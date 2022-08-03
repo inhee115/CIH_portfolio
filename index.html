@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <!-- <script src="./js/jquery-3.6.0.js"></script> -->
+    <script src="./js/script.js"></script>
+
+    <title>Haagen-dazs</title>
+</head>
+<body>
+    <div id="wrap">
+        <section class="banner">
+            <header class="header">
+                <div class="menu-box">
+                    <ul class="menu menu-l"  data-aos="fade-zoom-in"
+                    data-aos-delay="2000">
+                        <li>
+                            <a href="#none">product
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">membership
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">brand
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                                
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="header-logo"></div>
+                    <ul class="menu menu-r"  data-aos="fade-zoom-in"
+                    data-aos-delay="2000">
+                        <li>
+                            <a href="#none">customer
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">log in
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">cart(0)
+                                <svg class="menu-line">
+                                    <rect class="line"/>
+                                </svg>        
+                                
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-box-m">
+                    <div class="menu-btn" data-aos="fade-zoom-in"
+                    data-aos-delay="2000">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu-m">
+                        <li>
+                            <a href="#none">product</a>
+                        </li>
+                        <li>
+                            <a href="#none">recipes</a>
+                        </li>
+                        <li>
+                            <a href="#none">membership</a>
+                        </li>
+                        <li>
+                            <a href="#none">brand</a>
+                        </li>
+                        <li>
+                            <a href="#none">thatsdazs</a>
+                        </li>
+                        <li>
+                            <a href="#none">customer</a>
+                        </li>
+                    </ul>
+                    <div class="logo-m"></div>
+                    <div class="icon bag" data-aos="fade-zoom-in"
+                    data-aos-delay="2000">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M112 112C112 50.14 162.1 0 224 0C285.9 0 336 50.14 336 112V160H400C426.5 160 448 181.5 448 208V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V208C0 181.5 21.49 160 48 160H112V112zM160 160H288V112C288 76.65 259.3 48 224 48C188.7 48 160 76.65 160 112V160zM136 256C149.3 256 160 245.3 160 232C160 218.7 149.3 208 136 208C122.7 208 112 218.7 112 232C112 245.3 122.7 256 136 256zM312 208C298.7 208 288 218.7 288 232C288 245.3 298.7 256 312 256C325.3 256 336 245.3 336 232C336 218.7 325.3 208 312 208z"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="banner-txt" >
+                <div class="title font" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-easing="ease-in">
+                    <p>Find</p>
+                    <p>Your</p>
+                    <p>Luxury</p>
+                </div>
+                <div class="roll-btn" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-easing="ease-in">
+                    <div class="roll-box">
+                        <h2 class="btn1">our product!</h2>
+                        <h2 class="btn2">our product!</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-1">
+            <div class="container">
+                <div class="sec-1-head">
+                    <div class="badge">
+                        <div class="badge-inner back">
+                            <img src="./img/sec-1_badge.svg" alt="">
+                        </div>
+                        <div class="badge-inner icon">
+                            <img src="./img/icon_sec-1_ice-cream.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="head-inner">
+                        <div class="head-title font">Dazs Product</div>
+                        <div class="head-sub">
+                            세계 각국에서 찾아낸 엄선된 좋은 원재료만을 사용하여<br>
+                            60년 이상 이어져 온 타협하지 않는 장인정신의 레시피를 즐겨보세요
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-wrap swiper customSwiper">
+                    <div class="animate-slider-box box1 swiper-wrapper">
+                        <div class="slide box1 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">quart</h6>
+                                    <h1 class="title font">vanilla</h1>
+                                    <h3 class="price">￦ 23,200</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box2 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">bars</h6>
+                                    <h1 class="title font">choco almond</h1>
+                                    <h3 class="price">￦ 5,200</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box3 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">pint</h6>
+                                    <h1 class="title font">irish cream<br>brownie</h1>
+                                    <h3 class="price">￦ 13,900</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box4 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">cake&desort</h6>
+                                    <h1 class="title font">mini blanc cake</h1>
+                                    <h3 class="price">￦ 19,900</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box5 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">minicup</h6>
+                                    <h1 class="title font">mango</h1>
+                                    <h3 class="price">￦ 5,200</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box6 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_6.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">pint</h6>
+                                    <h1 class="title font">rum tres<br>leches</h1>
+                                    <h3 class="price">￦ 13,900</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box7 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_7.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">bars</h6>
+                                    <h1 class="title font">cookies cream</h1>
+                                    <h3 class="price">￦ 5,200</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box8 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_8.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">cake&desort</h6>
+                                    <h1 class="title font">macaron</h1>
+                                    <h3 class="price">￦ 38,900</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box9 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_9.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">bars</h6>
+                                    <h1 class="title font">vanilla caramel<br>almond</h1>
+                                    <h3 class="price">￦ 5,200</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box10 swiper-slide">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec-1_10.png" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <div class="txt-inner">
+                                    <h6 class="type">pint</h6>
+                                    <h1 class="title font">bourbon praline<br>pecan</h1>
+                                    <h3 class="price">￦ 13,900</h3>
+                                </div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">buy now!</h2>
+                                        <h2 class="btn2">buy now!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-2">
+            <div class="container">
+                <div class="card-flex-box">
+                    <div class="txt-box" data-aos="fade-up"
+                    data-aos-duration="2000">
+                        <div class="head-title font">
+                            <span>#</span>ThatsDazs</div>
+                        <div class="head-sub">당신이 있는 곳에서 찾은 한입에 담긴 럭셔리를 #ThatsDazs로 공유해보세요</div>
+                        <div class="roll-btn">
+                            <div class="roll-box">
+                                <h2 class="btn1">thats more!</h2>
+                                <h2 class="btn2">thats more!</h2>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="card-wrap" data-aos="fade-left"
+                    data-aos-duration="2000">
+                        <div class="card box1"></div>
+                        <div class="card box2"></div>
+                        <div class="card box3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-3">
+            <div class="container">
+                <div class="sec-3-flex">
+                    <div class="box-l">
+                        <div class="left-inner">
+                            <div class="head">
+                                <div class="head-title font">More<br>Dazs Flavor</div>
+                                <div class="head-sub">다양한 제품을 확인하고 자신에게 맞는 맛을 찾아보세요</div>
+                                <div class="roll-btn">
+                                    <div class="roll-box">
+                                        <h2 class="btn1">find it!</h2>
+                                        <h2 class="btn2">find it!</h2>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="icon-container">
+                                <div class="icon-box" data-aos="fade-up"
+                                data-aos-duration="500">
+                                    <img src="./img/icon_sec-3_1.svg" alt="">
+                                </div>
+                                <div class="icon-box" data-aos="fade-up"
+                                data-aos-duration="1000">
+                                    <img src="./img/icon_sec-3_2.svg" alt="">
+                                </div>
+                                <div class="icon-box"data-aos="fade-up"
+                                data-aos-duration="1500">
+                                    <img src="./img/icon_sec-3_3.svg" alt="">
+                                </div>
+                                <div class="icon-box" data-aos="fade-up"
+                                data-aos-duration="2000">
+                                    <img src="./img/icon_sec-3_1.svg" alt="">
+                                </div>
+                                <div class="icon-box" data-aos="fade-up"
+                                data-aos-duration="2500">
+                                    <img src="./img/icon_sec-3_2.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-r">
+                        <ul class="flavor">
+                            <li>
+                                <svg veiwBow="0 0 262 67">
+                                    <text x="0" y="50">
+                                        City Sweet
+                                        <tspan dx="-7" dy="-30">8</tspan>
+                                    </text>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg veiwBow="0 0 262 67">
+                                    <text x="0" y="50">
+                                        Sorbet
+                                        <tspan dx="-9" dy="-30">3</tspan>
+                                    </text>
+                                </svg>
+
+                            </li>
+                            <li>
+                                <svg veiwBow="0 0 262 67">
+                                    <text x="0" y="50">
+                                        Non-Dairy
+                                        <tspan dx="-7" dy="-30">6</tspan>
+                                    </text>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg veiwBow="0 0 300 67">
+                                    <text x="0" y="50">
+                                        Gluten-Free
+                                        <tspan dx="-10" dy="-30">34</tspan>
+                                    </text>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg veiwBow="0 0 262 67">
+                                    <text x="0" y="50">
+                                        Vegan
+                                        <tspan dx="-13" dy="-30">5</tspan>
+                                    </text>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-4">
+            <div class="container">
+                <div class="animation-txt box1">
+                    <img src="./img/membership_l.png" alt="">
+                </div>
+                <div class="head">
+                    <div class="head-title font">Membership</div>
+                </div>
+                <div class="sec-4-swiper swiper mySwiper">
+                    <div class="sec-4-wrapper swiper-wrapper">
+                        <div class="sec-4-slide swiper-slide">
+                            <div class="inner">
+                                <div class="title">welcome</div>
+                                <div class="icon-box">
+                                    <img src="./img/icon_sec-4_welcome.svg" alt="">
+                                </div>
+                                <div class="sub">신규 가입시 15% 할인<br>(3만원 이상 구매시)</div>
+                            </div>    
+                        </div>
+                        <div class="sec-4-slide swiper-slide">
+                            <div class="inner">
+                                <div class="title">birthday</div>
+                                <div class="icon-box">
+                                    <img src="./img/icon_sec-4_birthday.svg" alt="">
+                                </div>
+                                <div class="sub">하겐다즈 케이크<br>4,000원 할인</div>
+                            </div>    
+                        </div>
+                        <div class="sec-4-slide swiper-slide">
+                            <div class="inner">
+                                <div class="title">reveiw</div>
+                                <div class="icon-box">
+                                    <img src="./img/icon_sec-4_reveiw.svg" alt="">
+                                </div>
+                                <div class="sub">리뷰 작성시<br>500원 할인 쿠폰</div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="sec-4-btn swiper-pagination"></div>
+                </div>
+                <div class="animation-txt box2">
+                    <img src="./img/membership_r.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-5">
+            <div class="container">
+                <div class="badge">
+                    <div class="badge-inner back">
+                        <img src="./img/sec-5_badge.svg" alt="">
+                    </div>
+                    <div class="badge-inner icon">
+                        <img src="./img/icon_sec-5_co.svg" alt="">
+                    </div>
+                </div>
+                <div class="card-flex-box">
+                    <div class="txt-box" data-aos="fade-up"
+                    data-aos-duration="2000">
+                        <div class="head-title font">Collaboration</div>
+                        <div class="head-sub">새롭게 떠오르는 아티스트와의 협업을 통한 작품을 만나보세요</div>
+                        <div class="roll-btn">
+                            <div class="roll-box">
+                                <h2 class="btn1">veiw more !</h2>
+                                <h2 class="btn2">veiw more !</h2>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="card-wrap" data-aos="fade-left"
+                    data-aos-duration="2000">
+                        <div class="card box1"></div>
+                        <div class="card box2"></div>
+                        <div class="card box3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-6">
+            <div class="container">
+                <div class="head">
+                    <div class="head-title font">Dazs Recipes</div>
+                    <div class="head-sub">
+                        하겐다즈 아이스크림의 다양한 플레이버를 통해<br>
+                        차별화된 맛과 비주얼의 크리에이션 레시피를 만들어보세요
+                    </div>
+                </div>
+                <div class="animate-wrap swiper customSwiper">
+                    <div class="animate-slider-box box1 swiper-wrapper">
+                        <div class="slide box1 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_1.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                butter pecan pancake ice cream sundae
+                            </div>
+                        </div>
+                        <div class="slide box2 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_2.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                chocolate ice crean cupcakes
+                            </div>
+                        </div>
+                        <div class="slide box3 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_3.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                peppermint bark ice cream float
+                            </div>
+                        </div>
+                        <div class="slide box4 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_4.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                ice cream Meringue sandwiches
+                            </div>
+                        </div>
+                        <div class="slide box5 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_5.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                banana split rum salted caramel
+                            </div>
+                        </div>
+                        <div class="slide box6 swiper-slide">
+                            <div class="img-box">
+                                <img src="./img/sec-6_6.jpg" alt="">
+                            </div>
+                            <div class="title font">
+                                vanilla ice cream brownie
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="head">
+                    <div class="logo-box">
+                        <img src="./img/logo-white.svg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="txt-box">
+                        <div class="title">한국하겐-다즈(주)</div>
+                        <div class="sub">
+                            <div class="in-box">
+                                <p>대표 김미조</p>
+                                <p>주소 서울특별시 강남구 테헤란로 311 (역삼동, 아남타워 6층)</p>
+                            </div>
+                            <div class="in-box">
+                                <p>사업자등록번호 106-81-28964</p>
+                                <p>통신판매신고 강남-8186</p>
+                            </div>
+                            <div class="in-box">
+                                <p>대표전화 02-508-8500</p>
+                                <p>개인정보관리책임자 김미조 대표</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="notice">
+                        <li>공지사항</li>
+                        <li>이벤트</li>
+                        <li>매장안내</li>
+                        <li>고객센터</li>
+                    </ul>
+                    <div class="icon">
+                        <div class="in-box">
+                            <div class="img-box">
+                                <img src="./img/icon_f_facebook.svg" alt="">
+                            </div>
+                            <div class="img-box">
+                                <img src="./img/icon_f_instagram.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="in-box">
+                            <div class="img-box">
+                                <img src="./img/icon_f_youtube.svg" alt="">
+                            </div>
+                            <div class="img-box">
+                                <img src="./img/icon_f_cacaoch.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">Copyright © 2021 Haagen-Dazs Korea. All Rights Reserved.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
