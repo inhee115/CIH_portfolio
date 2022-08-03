@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-  //fullpage
-  new fullpage('#wrap', {
-    anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
-    scrollBar: true
-  });
-
   // swiper
   var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
@@ -27,6 +21,9 @@ $(document).ready(function(){
     $('.swiper-head').addClass('active')
     $('.title-slide').siblings().children('.swiper-head').removeClass('active')
   }else{}
+
+  //브라우저 오픈시 작동
+  $('#intro .show').addClass('active');
 
   //header-btn
   $('.header-btn').click(function(){
@@ -54,38 +51,6 @@ $(document).ready(function(){
     });
   });
     
-  //브라우저 오픈시 작동
-  $('#intro .show').addClass('active');
-
-  //skill animation
-  $(window).scroll(function(){
-    var sct = $(window).scrollTop();
-    console.log(sct);
-
-    //intro animation
-    var introT = $('#intro').offset().top;
-    if(sct == introT){
-      $('#intro .show').addClass('active');
-    }else{
-      $('#intro .show').removeClass('active');
-    }
-
-    var skillT = $('#skill').offset().top;
-    if(sct == skillT ){
-      $('.skill-svg .circle').addClass('active');
-    }else{
-      $('.skill-svg .circle').removeClass('active');
-    }
-
-    //contact animation
-    var contactT = $('#contact').offset().top;
-    if(sct == contactT){
-      $('#contact .show').addClass('active');
-    }else{
-      $('#contact .show').removeClass('active');
-    }
-  });
-
   //skill tab-menu
   $('.skill-svg li').hover(function(){
     $(this).addClass('active');
@@ -98,18 +63,67 @@ $(document).ready(function(){
   });
 
 
-  // var ww = $(window).width();
-  // media();
+  var ww = $(window).width();
+  media();
 
-  // function media(){
-  //   if(ww > 500){
-  //     //fullpage
-  //     new fullpage('#wrap', {
-  //       anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
-  //       scrollBar: true
-  //     });
-  //   }else{}
-  // }
+  function media(){
+    if(ww > 760){
+      //fullpage
+      new fullpage('#wrap', {
+        anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
+        scrollBar: true
+      });
+
+      $(window).scroll(function(){
+        var sct = $(window).scrollTop();
+        console.log(sct);
+
+        //intro animation
+        var introT = $('#intro').offset().top;
+        if(sct == introT){
+          $('#intro .show').addClass('active');
+        }else{
+          $('#intro .show').removeClass('active');
+        }
+
+        //skill animation
+        var skillT = $('#skill').offset().top;
+        if(sct == skillT ){
+          $('.skill-svg .circle').addClass('active');
+        }else{
+          $('.skill-svg .circle').removeClass('active');
+        }
+
+        //contact animation
+        var contactT = $('#contact').offset().top;
+        if(sct == contactT){
+          $('#contact .show').addClass('active');
+        }else{
+          $('#contact .show').removeClass('active');
+        }
+      });
+
+    }else{
+      $(window).scroll(function(){
+        var sct = $(window).scrollTop();
+
+        //skill animation
+        var skillT = $('#skill').offset().top;
+        if(sct >= skillT ){
+          $('.skill-svg .circle').addClass('active');
+        }else{
+          $('.skill-svg .circle').removeClass('active');
+        }
+
+      });
+
+
+      //skill, contact animation 제거
+      $('#intro .show').addClass('active');
+      $('#contact .show').addClass('active');
+
+    }
+  }
 
   
   
