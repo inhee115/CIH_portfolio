@@ -1263,8 +1263,14 @@
     .menu-box .menu a {
         font-size: 35px;
     }
+    .intro-txt {
+        top: -25%;
+    }
+    .intro-txt .sub{
+        top: 0;
+    }
     .intro-circle{
-        top: 50%;
+        top: 45%;
         width: 190px;
         height: 190px;
     }
@@ -1272,10 +1278,13 @@
         width: 15px;
         height: 22px;
     }
+    .intro-scroll{
+        bottom: 5%;
+    }
 
     /* about */
     #about .flex-box{
-        padding: 100px 0 25px;
+        padding: 0;
         justify-content: center;
     }
     #about .photo {
@@ -1285,7 +1294,10 @@
     }
     .about-txt {
         font-size: 10px;
-        padding-top: 40px;
+        padding-top: 30px;
+    }
+    .certificate-box {
+        padding: 50px 0 0;
     }
     .certificate-head {
         font-size: 16px;
@@ -1328,11 +1340,15 @@
         width: 80% !important;
     }
     .swiper-head{
-        height: 30px;
+        height: 25px;
     }
     .swiper-head .e {
         font-size: 30px;
         letter-spacing: 1px;
+        bottom: 10px;
+    }
+    .swiper-head .e img{
+        object-fit: contain;
     }
     .portfolio-content .info{
         font-size: 10px;
