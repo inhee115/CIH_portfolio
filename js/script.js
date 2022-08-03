@@ -22,9 +22,6 @@ $(document).ready(function(){
     $('.title-slide').siblings().children('.swiper-head').removeClass('active')
   }else{}
 
-  //브라우저 오픈시 작동
-  $('#intro .show').addClass('active');
-
   //header-btn
   $('.header-btn').click(function(){
     $('.menu-box').toggleClass('active');
@@ -74,6 +71,9 @@ $(document).ready(function(){
         scrollBar: true
       });
 
+      //브라우저 오픈시 작동
+      $('#intro .show').addClass('active');
+
       $(window).scroll(function(){
         var sct = $(window).scrollTop();
         console.log(sct);
@@ -117,8 +117,7 @@ $(document).ready(function(){
 
       });
 
-
-      //skill, contact animation 제거
+      //contact animation 제거
       $('#intro .show').addClass('active');
       $('#contact .show').addClass('active');
 
