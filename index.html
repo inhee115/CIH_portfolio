@@ -1,435 +1,1389 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-  />
+@charset "uft-8";
 
-    <script src="./js/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js"></script>
-    <script src="./js/fullpage.js"></script>
-    <script src="./js/script.js"></script>
+/* 공통영역 */
+.full{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container{
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+}
+.title{
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    width: 23px;
+    height: auto;
+}
+/* 공통 애니메이션 */
+.hidden{
+    position: relative;
+    overflow: hidden;
+}
+.show{
+    transform: translateY(105%);
+    transition: 1s;
+}
+.show.active{
+    transform: translateY(0);
+}
+.hidden::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -1;
+}
 
-    <title>ChoiInHee_portfolio</title>
-</head>
-<body>
-    <div id="wrap">
-        <section class="section">
-            <div id="intro" class="full">
-                <div class="title">
-                    <img src="./img/title_name.svg" alt="">
-                </div>
-                <header class="header">
-                    <div class="header-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </header>
-                <ul class="menu-box">
-                    <li class="menu">
-                        <a href="#intro" class="font">intro</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#about" class="font">about me</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#skill" class="font">skill</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#portfolio" class="font">portfolio</a>
-                    </li>
-                    <li class="menu">
-                        <a href="#contact" class="font">contact</a>
-                    </li>
-                </ul>
+/* intro */
+#intro .title,
+#portfolio .title{
+    height: 23px;
+    width: auto;
+}
+.menu-box{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
     
-                <div class="container">
-                    <div class="intro-txt">
-                        <div class="head">
-                            <div class="box1 hidden">
-                                <div class="show img-box">
-                                    <img src="./img/head_web.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="box2 hidden">
-                                <div class="show img-box">
-                                    <img src="./img/head_publisher.svg" alt="">
-                                </div>
-                            </div>    
-                        </div>
-                        <h6 class="sub">
-                            Hello!<br>
-                            Welcome To My Portfolio :)
-                        </h6>
-                    </div>
-                    <div class="intro-circle">
-                        <div class="circle-txt">
-                            <div class="img-box num1">
-                                <img src="./img/icon_2.svg" alt="">
-                            </div>
-                            <div class="img-box num2">
-                                <img src="./img/icon_0.svg" alt="">
-                            </div>
-                            <div class="img-box num3">
-                                <img src="./img/icon_2.svg" alt="">
-                            </div>
-                            <div class="img-box num4">
-                                <img src="./img/icon_2.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="intro-scroll">
-                        <div class="roll">
-                            <img src="./img/icon_scroll-down.svg" alt="">
-                        </div>
-                        <div class="arrow">
-                            <img src="./img/icon_arrow.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    background-color: #514358ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        <section class="section">
-            <div id="about" class="full">
-                <div class="title">
-                    <img src="./img/title_aboutme.svg" alt="">
-                </div>
-                <div class="container">
-                    <div class="flex-box">
-                        <div class="flex-inner">
-                            <div class="photo">
-                                <img src="./img/photo.jpg" alt="">
-                            </div>        
-                        </div>
-                        <div class="flex-inner">
-                            <p class="about-txt">
-                                안녕하세요. 신입 웹퍼블리셔 최인희입니다.<br>
-                                ‘늦었다고 생각했을때가 가장 빠른 때다’ 라는 마음가짐으로<br>
-                                새롭게 웹퍼블리싱이라는 분야를 시작하게 되었습니다.<br>
-                                먼 길을 돌아온 만큼 정체되어 있지 않고 성장하는 퍼블리셔가 되겠습니다.<br>
-                                감사합니다 :)
-                            </p>
-                            <ul class="certificate-box">
-                                <li class="certificate-head">certificate</li>
-                                <li class="certificate-content">
-                                    <div class="certificate">
-                                        <div class="img-box">
-                                            <img src="./img/certificate_ps.svg" alt="">
-                                        </div>
-                                        <p>GTQ 1급</p>
-                                    </div>
-                                    <div class="certificate">
-                                        <div class="img-box">
-                                            <img src="./img/certificate_ai.svg" alt="">
-                                        </div>
-                                        <p>GTQi 1급</p>
-                                    </div>
-                                </li>
-                            </ul>        
-                        </div>
-                    </div>
-                </div>
-                <div class="about-roll">
-                    <div class="img-box">
-                        <img src="./img/about_roll-txt.svg" alt="">
-                    </div>
-                    <div class="img-box">
-                        <img src="./img/about_roll-txt.svg" alt="">
-                    </div>
-                </div>   
-            </div>
-        </section>
+    padding: 150px 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+.menu-box.active{
+    transform: translateX(0);
+}
+.menu-box .menu{
+    text-align: center;
+}
+.menu-box .menu a{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 600;
+    color: #e9e9e9;
+    text-transform: uppercase;
+    overflow: hidden;
 
-        <section class="section">
-            <div id="skill" class="full">
-                <div class="title">
-                    <img src="./img/title_skill.svg" alt="">
-                </div>
-                <div class="container">
-                    <div class="flex-box">
-                        <div class="tab-box">
-                            <div class="tab-out center"></div>
-                            <div class="tab-in center"></div>
-                            <ul class="tabs center">
-                                <li id="tab1" class="center tab-skill active">
-                                    <div class="img-box">
-                                        <img src="./img/skill_html.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        웹 표준과 웹 접근성을 준수하는<br>
-                                        HTML 구조설계로 시맨틱 태그를<br>
-                                        사용하여 마크업을 작성합니다.
-                                    </p>
-                                </li>
-                                <li id="tab2" class="center tab-skill">
-                                    <div class="img-box">
-                                        <img src="./img/skill_css.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        크로스브라우징에 대해 고려하며<br>
-                                        반응형 레이아웃 및 원하는 스타일로<br>
-                                        코드 구현이 가능합니다.
-                                    </p>
-                                </li>
-                                <li id="tab3" class="center tab-skill">
-                                    <div class="img-box">
-                                        <img src="./img/skill_js.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        필수적인 자바스크립트 활용이 가능하며<br>
-                                        주로 제이쿼리를 병행하여 사용합니다 .
-                                    </p>
-                                </li>
-                                <li id="tab4" class="center tab-skill">
-                                    <div class="img-box">
-                                        <img src="./img/skill_jquery.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        제이쿼리를 활용하여<br>
-                                        다앙한 애니메이션과 기능을<br>
-                                        구현할 수 있습니다.
-                                    </p>
-                                </li>
-                                <li id="tab5" class="center tab-skill">
-                                    <div class="img-box">
-                                        <img src="./img/skill_ps.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        사진 색감 및 사이즈 보정하는 등<br>
-                                        디자인 작업을 하여<br>
-                                        웹의 느낌을 살립니다.
-                                    </p>
-                                </li>
-                                <li id="tab6" class="center tab-skill">
-                                    <div class="img-box">
-                                        <img src="./img/skill_ai.svg" alt="">
-                                    </div>
-                                    <p class="txt">
-                                        svg,아이콘 등을 직접 작업하여<br>
-                                        웹 디자인에 다양성을 줍니다.
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        <ul class="skill-svg">
-                            <li data-alt="tab1" class="svg-box box1 active">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg> 
-                                    <span>95%</span>
-                                </div>
-                                <div class="svg-title">HTML</div>
-                            </li>
-                            <li data-alt="tab2" class="svg-box box2">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg>
-                                    <span>95%</span>
-                                </div>
-                                <div class="svg-title">CSS</div>
-                            </li>
-                            <li data-alt="tab3" class="svg-box box3">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg>
-                                    <span>80%</span>
-                                </div>
-                                <div class="svg-title">Javascript</div>
-                            </li>
-                            <li data-alt="tab4" class="svg-box box4">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg>
-                                    <span>85%</span>
-                                </div>
-                                <div class="svg-title">JQuery</div>
-                            </li>
-                            <li data-alt="tab5" class="svg-box box5">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg>
-                                    <span>95%</span>
-                                </div>
-                                <div class="svg-title">PHOTOSHOP</div>
-                            </li>
-                            <li data-alt="tab6" class="svg-box box6">
-                                <div class="svg-animation">
-                                    <svg class="chart" viewBox="0 0 33 33">
-                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
-                                    </svg>
-                                    <span>95%</span>
-                                </div>
-                                <div class="svg-title">ILLUSTRATOR</div>
-                            </li>
-                        </ul>    
-                    </div>
-                </div>
-            </div>
-        </section>
+    position: relative;
+}
+.menu-box .menu a::before{
+    content: '';
+    width: 100%;
+    height: 40%;
+    background-color: #B7A6CC;
+    opacity: 0.5;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translateX(-105%);
+    transition: 0.5s;
+}
+.menu-box .menu a:hover::before{
+    transform: translateX(0);
+}
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-btn{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.header-btn span{
+    width: 12px;
+    height: 12px;
+    background-color: #222;
+    border-radius: 50%;
+    display: inline-block;
+}
+.header-btn span:nth-child(2n){
+    margin-left: 6px;
+}
+.header-btn span:nth-child(1),
+.header-btn span:nth-child(2){
+    margin-bottom: 6px;
+}
 
-        <section class="section">
-            <div id="portfolio" class="full">
-                <div class="title">
-                    <img src="./img/title_portfolio.svg" alt="">
-                </div>
-                <div class="swiper-wrap swiper mySwiper">
-                    <div class="swiper-slide-box swiper-wrapper">
-                        <div class="title-slide box1 swiper-slide">
-                            <div class="swiper-head">
-                                <div class="head k">
-                                    <img src="./img/portfolio_hanwharesort.svg" alt="">
-                                </div>
-                                <div class="head e font">hanwharesort</div>
-                            </div>
-                            <div class="portfolio-content hanwha">
-                                <div class="info-box">
-                                    <div class="info-inner">
-                                        <div class="info">
-                                            다양한 정보를 보기 편하도록 깔끔하게 디자인 하였으며,<br>
-                                            한화리조트 메인 컬러에 맞게 블루톤에 맞춰 통일감을 줬습니다.<br>
-                                            tab-menu, hover시 백그라운드이미지 변경 등의 기능 구현하였고<br>
-                                            반응형으로 제작하여 다양한 기기에서 사이트를 확인하실 수 있습니다.
-                                        </div>
-                                        <div class="info">
-                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
-                                            제작 기간 : 2주<br>
-                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
-                                        </div>
-                                        <div class="info bold">
-                                            #반응형 #tab-menu #hover #background-image
-                                        </div>
-                                        <a href="https://inhee115.github.io/hanwharesort/" class="portfolio-btn">
-                                            <p class="btn-txt">Go Site</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
-                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="title-slide box2 swiper-slide">
-                            <div class="swiper-head">
-                                <div class="head k">
-                                    <img src="./img/portfolio_haagen-dazs.svg" alt="">
-                                </div>
-                                <div class="head e font">haagen-dazs</div>
-                            </div>
-                            <div class="portfolio-content haagen">
-                                <div class="info-box">
-                                    <div class="info-inner">
-                                        <div class="info">
-                                            하겐다즈 이미지에 맞게 역동적이고 통통튀게 디자인 하였으며,<br>
-                                            'roll'을 컨셉으로 잡아 애니메이션을 구현하였습니다.<br>
-                                            swiper를 사용하여 동작에 다양성을 주었고<br>
-                                            hover, click시 모션이 작동되어 웹사이트에 쉬지않는 즐거움을 선사하였습니다.
-                                        </div>
-                                        <div class="info">
-                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
-                                            제작 기간 : 2주<br>
-                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
-                                        </div>
-                                        <div class="info bold">
-                                            #반응형 #swiper #animation #svg #click-photo #AOS
-                                        </div>
-                                        <a href="https://inhee115.github.io/Haagen-dazs/" class="portfolio-btn">
-                                            <p class="btn-txt">Go Site</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
-                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="title-slide box3 swiper-slide">
-                            <div class="swiper-head">
-                                <div class="head k">
-                                    <img src="./img/portfolio_choi.svg" alt="">
-                                </div>
-                                <div class="head e font">protfolio</div>
-                            </div>
-                            <div class="portfolio-content choi">
-                                <div class="info-box">
-                                    <div class="info-inner">
-                                        <div class="info">
-                                            제가 작업한 포트폴리오를 소개하는 페이지로,<br>
-                                            제가 가장 좋아하고 저를 표현할 수 있는 보라색을 메인 컬러로 디자인하였습니다.<br>
-                                            fullpage, swiper, animation을 적용하여 심플하지만 다양한 액션을 구현하였고<br>
-                                            글씨 사이즈를 크게 잡아 가시성과 집중력을 높혔습니다.
-                                        </div>
-                                        <div class="info">
-                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
-                                            제작 기간 : 2주<br>
-                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
-                                        </div>
-                                        <div class="info bold">
-                                            #반응형 #fullpage #swiper #animation
-                                        </div>
-                                        <a href="#none" class="portfolio-btn">
-                                            <p class="btn-txt">Go Site</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
-                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
+/* header-btn active추가 */
+.header-btn.active{
+    position: relative;
+    display: inline-block;
+}
+.header-btn.active span:nth-child(1),
+.header-btn.active span:nth-child(3){
+    display: none;
+}
+.header-btn.active span{
+    width: 100%;
+    height: 3px;
+    background-color: #e9e9e9;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.header-btn.active span:nth-child(2n){
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.header-btn.active span:nth-child(4){
+    transform: rotate(135deg);
+}
 
-            </div>
-        </section>
+/* intro container */
+#intro .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        <section class="section">
-            <div id="contact" class="full">
-                <div class="title">
-                    <img src="./img/title_contact.svg" alt="">
-                </div>
-                <div class="container">
-                    <div class="contact-txt">
-                        <div class="head">
-                            궁금한 점이 있으시다면 연락 주시기 바랍니다.<br>
-                            연락 주시면 3일 이내 회신드리겠습니다. 감사합니다 :)
-                        </div>
-                        <div class="email hidden">
-                            <div class="img-box show">
-                                <img src="./img/email.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="phone hidden">
-                            <div class="img-box show">
-                                <img src="./img/phone.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="animation-box">
-                            <div class="contact-circle">
-                                <div class="img-box">
-                                    <img src="./img/icon_circle.svg" alt="">
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    <p>Copyright 2022. All rights reserved.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+.intro-txt{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.intro-txt .head{
+    display: flex;
+    flex-direction: column;
+}
+.intro-txt .head .box1{
+    width: 37%;
+    height: auto;
+    margin-bottom: 25px;
+}
+.intro-txt .head .box2{
+    width: 100%;
+    height: auto;
+}
+.intro-txt .head .img-box{
+    width: 100%;
+    height: 100%;
+}
+.intro-txt .sub{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+}
+
+.intro-circle{
+    width: 250px;
+    height: 250px;
+    background-color: #EBD8F6;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-circle .circle-txt{
+    display: flex;
+}
+.intro-circle .img-box{
+    width: 21px;
+    height: 30px;
+    margin-right: 8px;
+    animation: bounce2 1.9s infinite;
+}
+.intro-circle .img-box.num2{
+    animation-delay: 0.3s;
+}
+.intro-circle .img-box.num3{
+    animation-delay: 0.6s;
+}
+.intro-circle .img-box.num4{
+    animation-delay: 0.9s;
+}
+.intro-circle .img-box:last-child{
+    margin-right: 0;
+}
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-20px);}
+	60% {transform: translateY(-5px);}
+}
+.intro-scroll{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+}
+.intro-scroll .roll{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+}
+.intro-scroll .roll img{
+    animation: scroll 10s linear infinite;
+}
+.intro-scroll .arrow{
+    width: 20px;
+    height: 40px;
+    margin: 0 auto;
+}
+@keyframes scroll{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* about */
+#about{
+    overflow: hidden;
+}
+#about .flex-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#about .flex-inner{
+    width: 50%;
+}
+#about .photo{
+    width: 530px;
+    height: 725px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.about-txt{
+    font-size: 20px;
+    font-weight: 400;
+}
+.certificate-box{
+    padding: 120px 0;
+}
+.certificate-head{
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.certificate-content{
+    display: flex;
+}
+.certificate:first-child{
+    padding-right: 50px;
+}
+.certificate .img-box{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.certificate p{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+.about-roll{
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    display: flex;
+    z-index: 9;
+}
+.about-roll .img-box{
+    width: 2240px;
+    height: 45px;
+}
+.about-roll .img-box:first-child{
+    margin-right: 45px;
+}
+.about-roll .img-box img{
+    animation: about 30s linear infinite;
+}
+@keyframes about{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* skill */
+#skill .flex-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#skill .tab-box{
+    width: 650px;
+    height: 650px;
+    position: relative;
+}
+#skill .tab-box .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#skill .tab-out{
+    width: 100%;
+    height: 100%;
+    background: url(../img/skill_roll-txt.svg) no-repeat center;
+    background-size: cover;
+
+    animation: tabroll 60s linear infinite;
+}
+@keyframes tabroll{
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+#skill .tab-in{
+    width: 80%;
+    height: 80%;
+    border: 5px solid #9875AB;
+    border-radius: 50%;
+}
+#skill .tabs{
+    width: 100%;
+    height: 100%;
+}
+#skill .tab-skill{
+    opacity: 0; 
+    transition: 0.5s;   
+}
+#skill .tab-skill.active{
+    opacity: 1;
+}
+#skill .tabs .img-box{
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+}
+#skill .tabs .txt{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f012c;
+    text-align: center;
+    padding-top: 25px;
+}
+#skill .tab-skill{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill-svg{
+    display: flex;
+    flex-wrap: wrap;
+    width: 670px;
+}
+.skill-svg .svg-box{
+    margin-right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-svg .svg-box:nth-child(3n){
+    margin-right: 0;
+}
+.skill-svg .box1,
+.skill-svg .box2,
+.skill-svg .box3{
+    margin-bottom: 65px;
+}
+.skill-svg .svg-animation{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+}
+.skill-svg .circle{
+    stroke: #714D85;
+    stroke-width:3px;
+    stroke-dasharray: 0 100;
+
+    fill: none;
+    transform: rotate(-90deg); 
+    transform-origin: center; 
+}
+.skill-svg .circle.active{
+    animation: fill95 2s reverse forwards; 
+}
+.skill-svg .box3 .circle.active{
+    animation: fill80 2s reverse forwards; 
+}
+.skill-svg .box4 .circle.active{
+    animation: fill85 2s reverse forwards; 
+}
+@keyframes fill95 {
+    0%{
+        stroke-dasharray: 83 100;
+    }
+    100%{ 
+        stroke-dasharray: 0 100; 
+    }
+}
+@keyframes fill85 {
+    0%{
+        stroke-dasharray: 80 100;
+    }
+    100%{ 
+        stroke-dasharray: 0 100; 
+    }
+}@keyframes fill80 {
+    0%{
+        stroke-dasharray: 76 100;
+    }
+    100%{ 
+        stroke-dasharray: 0 100; 
+    }
+}
+
+.skill-svg span{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: -92px;
+    left: 0;
+}
+.skill-svg .svg-title{
+    font-size: 25px;
+    font-weight: 800;
+    position: relative;
+    overflow: hidden;
+}
+.skill-svg .svg-title::before{
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #B7A6CC;
+    opacity: 0.3;
+    transform: translateX(-105%);
+    transition: 0.5s;
+}
+.skill-svg li.active .svg-title::before{
+    transform: translateX(0);
+}
+
+
+/* protfolio */
+.swiper-wrap{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.swiper-head{
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    height: 65px;
+}
+.swiper-head .head{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-head .k{
+    width: auto;
+    height: 100%;
+}
+.swiper-head .e{
+    font-size: 90px;
+    font-weight: 600;
+    text-transform: uppercase;
+    bottom: 10px;
+    color: #EBD8F6;
+    opacity: .5;
+    z-index: -1;
+}
+.swiper-wrap .title-slide{
+    width: 985px !important;
+    margin: 30px 57.5px !important;
+}
+.swiper-button-next, .swiper-button-prev{
+    display: none !important;
+}
+.portfolio-content{
+    width: 100%;
+    height: auto;
+    padding-bottom: 68.527%;
+
+    position: relative;
+    margin-top: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.15);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.portfolio-content.hanwha{
+    background-image: url(../img/portfolio_1.png);
+}
+.portfolio-content.haagen{
+    background-image: url(../img/portfolio_2.png);
+}
+.portfolio-content.choi{
+    background-image: url(../img/portfolio_3.png);
+}
+.portfolio-content .info-box{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgb(34,34,34,0.8);
+    opacity: 0;
+    transition: 0.3s;
+}
+.portfolio-content .info-box:hover{
+    opacity: 1;
+}
+.portfolio-content .info-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.portfolio-content .info{
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.portfolio-content .info.bold{
+    font-weight: 800;
+}
+.portfolio-btn{
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #c6b5fa;
+    padding: 12px 30px;
+    margin: 35px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+.portfolio-btn .btn-txt{
+    font-size: 15px;
+    font-weight: 600;
+    color: #c6b5fa;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.portfolio-btn svg{
+    width: 20px;
+    height: 24px;
+}
+.portfolio-btn:hover{
+    background-color: #c6b5fa;
+}
+.portfolio-btn:hover .btn-txt{
+    color: #fff;
+}
+.portfolio-btn:hover svg path{
+    stroke: #fff;
+}
+
+
+/* contact */
+#contact .container{
+    position: relative;
+}
+.contact-txt{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+#contact .head{
+    font-size: 25px;
+    font-weight: 400;
+}
+#contact .email{
+    margin-top: 80px;
+}
+#contact .email .img-box{
+    width: 100%;
+    height: auto;
+}
+#contact .phone{
+    margin-top: 35px;
+}
+#contact .phone .img-box{
+    width: 56%;
+    height: auto;
+}
+#contact .animation-box{
+    position: absolute;
+    right: 5%;
+    bottom: -25%;
+}
+#contact .animation-box .img-box{
+    width: 240px;
+    height: auto;
+}
+#contact .animation-box .img-box img{
+    animation: contact 5s linear infinite;
+
+}
+@keyframes contact {
+    0%, 100% { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9) ; }
+    75% { transform: scale(0.95, 1.05) ; }
+  }
+#contact p{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width:1700px){
+    /* 공통 */
+    .container{
+        width: 1100px;
+    }
+
+    /* intro */
+    .intro-txt .sub{
+        font-size: 16px;
+        right: 25%;
+    }
+    .intro-circle{
+        width: 200px;
+        height: 200px;
+        top: 14%;
+        left: 75%;
+    }
+    .intro-circle .img-box{
+        width: 15px;
+        height: 22px;
+        margin-right: 10px;
+    }
+    .intro-scroll .roll{
+        margin-bottom: 20px;
+    }
+    .intro-scroll .arrow {
+        width: 16px;
+        height: 33px;
+    }
+    /* menu */
+    .menu-box{
+        padding: 180px 0;
+    }
+    .menu-box .menu a{
+        font-size: 70px;
+    }
+
+    /* about */
+    #about .photo {
+        width: 430px;
+        height: 587px;
+        border-radius: 40px;
+    }
+    .about-txt {
+        font-size: 18px;
+    }
+    .certificate-box {
+        padding: 70px 0px;
+    }
+    .certificate-head {
+        font-size: 23px;
+    }
+    .certificate .img-box {
+        width: 75px;
+        height: 75px;
+    }
+    .certificate p {
+        font-size: 18px;
+    }
+    .about-roll{
+        bottom: 11%;
+    }
+    .about-roll .img-box {
+        width: 1991px;
+        height: 40px;
+    }
+    .about-roll .img-box:first-child {
+        margin-right: 40px;
+    }
+
+    /* skill */
+    #skill .tab-box {
+        width: 510px;
+        height: 510px;
+    }
+    #skill .tabs .img-box {
+        width: 100px;
+        height: 100px;
+    }
+    #skill .tabs .txt {
+        font-size: 14px;
+        padding-top: 15px;
+    }
+    .skill-svg{
+        width: 490px;
+    }
+    .skill-svg .svg-box{
+        margin-right: 50px;
+    }
+    .skill-svg .box1, .skill-svg .box2, .skill-svg .box3{
+        margin-bottom: 60px;
+    }
+    .skill-svg .svg-animation {
+        width: 130px;
+        height: 130px;
+    }
+    .skill-svg span{
+        font-size: 17px;
+        top: -80px;
+    }
+    .skill-svg .svg-title{
+        font-size: 20px;
+    }
+
+    /* portfolio */
+    .swiper-wrap .title-slide{
+        width: 840px !important;
+        margin: 30px 50px !important;
+    }
+    .swiper-head .e{
+        font-size: 85px;
+        bottom: 15px;
+    }
+    .portfolio-content .info{
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    .portfolio-btn{
+        width: 145px;
+        height: 45px;
+    }
+    .portfolio-btn .btn-txt{
+        font-size: 13px;
+    }
+    .portfolio-btn svg {
+        width: 18px;
+        height: 20px;
+    }
+
+    /* contact */
+    .contact-txt{
+        transform: translateY(-60%);
+    }
+    #contact .head {
+        font-size: 20px;
+    }
+    #contact .animation-box {
+        right: -2%;
+        bottom: -34%;
+    }
+    #contact .animation-box .img-box {
+        width: 210px;
+    }
+    #contact p{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width:1200px){
+    /* 공통 */
+    .container{
+        width: 900px;
+    }
+    .title{
+        top: 23px;
+        left: 25px;
+        width: 20px;
+    }
+
+    /* header */
+    .header{
+        height: 70px;
+        padding: 0 25px;
+    }
+    .header-btn{
+        width: 24px;
+        height: 24px;
+    }
+    .header-btn span{
+        width: 10px;
+        height: 10px;
+    }
+    .header-btn span:nth-child(1), .header-btn span:nth-child(2){
+        margin-bottom: 4px;
+    }
+    .header-btn span:nth-child(2n){
+        margin-left: 4px;
+    }
+    /* intro */
+    #intro .title, #portfolio .title{
+        height: 20px;
+    }
+    .intro-txt .sub {
+        font-size: 14px;
+    }
+    .intro-circle {
+        width: 185px;
+        height: 185px;
+        top: 18%;
+    }
+    .intro-scroll .roll {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* about */
+    #about .flex-box{
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+    #about .flex-inner{
+        width: auto;
+    }
+    #about .photo {
+        width: 360px;
+        height: 510px;
+    }
+    .about-txt {
+        font-size: 16px;
+    }
+    .certificate-box {
+        padding: 55px 0 0;
+    }
+    .certificate-head {
+        font-size: 20px;
+    }
+    .certificate:first-child {
+        padding-right: 40px;
+    }
+    .certificate .img-box {
+        width: 65px;
+        height: 65px;
+    }
+    .certificate p {
+        font-size: 16px;
+    }
+    .about-roll {
+        bottom: 15%;
+    }
+
+    /* skill */
+    #skill .flex-box{
+        flex-direction: column;
+        padding: 70px 0;
+    }
+    #skill .tab-box {
+        width: 430px;
+        height: 430px;
+    }
+    #skill .tabs .img-box {
+        width: 80px;
+        height: 80px;
+    }
+    #skill .tabs .txt {
+        font-size: 13px;
+        padding-top: 15px;
+    }
+    .skill-svg {
+        width: 540px;
+    }
+    .skill-svg .svg-box{
+        margin-right: 90px;
+    }
+    .skill-svg .box1, .skill-svg .box2, .skill-svg .box3{
+        margin-bottom: 30px;
+    }
+    .skill-svg .svg-animation {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    .skill-svg span {
+        font-size: 15px;
+        top: -75px;
+    }
+    .skill-svg .svg-title {
+        font-size: 18px;
+    }
+
+    /* portfolio */
+    .swiper-wrap .title-slide{
+        width: 760px !important;
+        margin: 30px 35px !important;
+    }
+    .swiper-head{
+        height: 55px;
+    }
+    .swiper-head .e {
+        font-size: 75px;
+        bottom: 15px;
+    }
+
+    /* contact */
+    #contact .head {
+        font-size: 18px;
+    }
+    #contact .phone {
+        margin-top: 30px;
+    }
+    #contact .animation-box {
+        right: 0%;
+        bottom: -44%;
+    }
+    #contact .animation-box .img-box {
+        width: 200px;
+    }
+
+}
+
+@media (max-width:960px){
+    /* 공통 */
+    .container{
+        width: 700px;
+    }
+    .title{
+        width: 18px;
+    }
+    #intro .title, #portfolio .title{
+        height: 18px;
+    }
+
+    /* intro */
+    .menu-box .menu a {
+        font-size: 65px;
+    }
+    .intro-txt .sub{
+        font-size: 12px;
+        right: 20%;
+        letter-spacing: 2px;
+    }
+    .intro-circle{
+        top: 13%;
+        left: 70%;
+    }
+
+    /* about */
+    #about .flex-box{
+        flex-direction: column;
+        padding: 90px 0 60px;
+    }
+    #about .flex-inner{
+        text-align: center;
+    }
+    #about .photo {
+        width: 350px;
+        height: 480px;
+    }
+    .about-txt {
+        font-size: 15px;
+        padding-top: 25px;
+    }
+    .certificate-box {
+        padding: 30px 0 0;
+    }
+    .certificate-head {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+    .certificate-content {
+        justify-content: center;
+    }
+    .certificate .img-box {
+        width: 55px;
+        height: 55px;
+    }
+    .certificate p {
+        font-size: 14px;
+    }
+    .about-roll {
+        bottom: 82%;
+    }
+    .about-roll .img-box{
+        width: 1734px;
+        height: 35px;
+    }
+    .about-roll .img-box:first-child {
+        margin-right: 35px;
+    }
+
+    /* skill */
+    #skill .flex-box{
+        padding: 70px 0 50px;
+    }
+    .skill-svg {
+        width: 510px;
+    }
+    .skill-svg .svg-box{
+        margin-right: 75px;
+    }
+
+    /* portfolio */
+    .swiper-wrap .title-slide{
+        width: 670px !important;
+        margin: 30px 20% !important;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        top: 60% !important;
+        color: #222 !important;
+        display: inline-block !important;
+    }
+
+    /* contact */
+    .contact-txt {
+        transform: translateY(-65%);
+    }
+    #contact .head {
+        font-size: 16px;
+    }
+    #contact .email {
+        margin-top: 70px;
+    }
+    #contact .animation-box {
+        right: 2%;
+        bottom: -55%;
+    }
+    #contact .animation-box .img-box{
+        width: 185px;
+    }
+
+}
+
+@media (max-width:760px){
+    /* 공통 */
+    .container{
+        width: 100%;
+        padding: 0 16px;
+    }
+    .title{
+        left: 16px;
+    }
+
+    /* intro */
+    .header{
+        padding: 0 16px;
+    }
+    .menu-box {
+        padding: 230px 0;
+    }
+    .menu-box .menu a {
+        font-size: 50px;
+    }
+    .intro-txt{
+        top: -15%;
+    }
+    .intro-txt .sub{
+        font-size: 10px;
+        right: 0;
+    }
+    .intro-circle{
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 215px;
+        height: 215px;
+    }
+    .intro-circle .img-box{
+        width: 17px;
+        height: 24px;
+    }
+    .intro-scroll .roll {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* about */
+    #about .flex-box{
+        padding: 120px 0 90px;
+    }
+    #about .photo {
+        width: 300px;
+        height: 420px;
+    }
+    .about-txt{
+        font-size: 12px;
+    }
+    .certificate-box {
+        padding: 60px 0 0;
+    }
+    .certificate-head {
+        font-size: 18px;
+    }
+    .certificate .img-box {
+        width: 50px;
+        height: 50px;
+    }
+    .certificate p {
+        font-size: 13px;
+    }
+    .about-roll {
+        bottom: 80%;
+    }
+    .about-roll .img-box {
+        width: 1175px;
+        height: 23px;
+        margin-right: 23px;
+    }
+
+    /* skill */
+    #skill .flex-box {
+        padding: 100px 0 70px;
+    }
+    #skill .tab-box {
+        width: 400px;
+        height: 400px;
+    }
+    #skill .tabs .img-box {
+        width: 50px;
+        height: 50px;
+    }
+    #skill .tabs .txt {
+        font-size: 10px;
+    }
+    .skill-svg{
+        width: 388px;
+    }
+    .skill-svg .svg-box {
+        margin-right: 50px;
+    }
+    .skill-svg .box1, .skill-svg .box2, .skill-svg .box3{
+        margin-bottom: 40px;
+    }
+    .skill-svg .svg-animation {
+        width: 95px;
+        height: 95px;
+    }
+    .skill-svg span {
+        font-size: 13px;
+        top: -63px;
+    }
+    .skill-svg .svg-title {
+        font-size: 16px;
+    }
+
+    /* portfolio */
+    .swiper-wrap .title-slide{
+        width: 450px !important;
+        margin: 30px 20% !important;
+    }
+    .swiper-head {
+        height: 45px;
+        margin-top: 0;
+    }
+    .swiper-head .e{
+        font-size: 50px;
+    }
+    .portfolio-content .info{
+        display: none;
+    }
+    .portfolio-content .info.bold{
+        display: block;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        width: 14px !important;
+        height: 27px !important;
+        top: 58% !important;
+        right: 2% !important;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 27px !important;
+    }
+
+    /* contact */
+    .contact-txt{
+        padding: 0 16px;
+        transform: translateY(-80%);
+    }
+    #contact .head {
+        font-size: 14px;
+    }
+    #contact .animation-box{
+        right: 8%;
+        bottom: -200px;
+    }
+    #contact .animation-box .img-box {
+        width: 170px;
+    }
+    #contact p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width:500px){
+    /* intro */
+    .menu-box .menu a {
+        font-size: 35px;
+    }
+    .intro-txt {
+        top: -25%;
+    }
+    .intro-txt .sub{
+        top: 0;
+    }
+    .intro-circle{
+        top: 45%;
+        width: 190px;
+        height: 190px;
+    }
+    .intro-circle .img-box {
+        width: 15px;
+        height: 22px;
+    }
+    .intro-scroll{
+        bottom: 5%;
+    }
+
+    /* about */
+    #about .flex-box{
+        padding: 0;
+        justify-content: center;
+    }
+    #about .photo {
+        width: 250px;
+        height: 341px;
+        border-radius: 20px;
+    }
+    .about-txt {
+        font-size: 10px;
+        padding-top: 30px;
+    }
+    .certificate-box {
+        padding: 50px 0 0;
+    }
+    .certificate-head {
+        font-size: 16px;
+    }
+    .certificate .img-box {
+        width: 45px;
+        height: 45px;
+    }
+    .certificate p {
+        font-size: 10px;
+    }
+    .about-roll {
+        bottom: 78%;
+    }
+
+    /* skill */
+    #skill .flex-box{
+        justify-content: center;
+        padding: 0;
+    }
+    #skill .tab-box{
+        display: none;
+    }
+    .skill-svg{
+        width: 100%;
+    }
+    .skill-svg .svg-box{
+        margin-right: 0;
+        width: 50%;
+    }
+    .skill-svg .box4{
+        margin-bottom: 40px;
+    }
+    .skill-svg .svg-title::before{
+        display: none;
+    }
+
+    /* portfolio */
+    .swiper-wrap .title-slide{
+        width: 80% !important;
+    }
+    .swiper-head{
+        height: 25px;
+    }
+    .swiper-head .e {
+        font-size: 30px;
+        letter-spacing: 1px;
+        bottom: 10px;
+    }
+    .swiper-head .e img{
+        object-fit: contain;
+    }
+    .portfolio-content .info{
+        font-size: 10px;
+    }
+    .portfolio-btn{
+        width: 95px;
+        height: 30px;
+        padding: 6px 16px;
+    }
+    .swiper-button-next, .swiper-button-prev{
+        top: 60% !important;
+    }
+    .portfolio-btn .btn-txt{
+        font-size: 10px;
+    }
+    .portfolio-btn svg {
+        width: 13px;
+        height: 16px;
+    }
+
+    /* contact */
+    #contact .head {
+        font-size: 10px;
+    }
+    #contact .email {
+        margin-top: 50px;
+    }
+    #contact .phone {
+        margin-top: 15px;
+    }
+    #contact .animation-box{
+        bottom: -170px;
+    }
+    #contact .animation-box .img-box {
+        width: 140px;
+    }
+
+}
