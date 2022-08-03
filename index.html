@@ -6,685 +6,430 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/jquery-1.12.4.js"></script>
-    <!-- <script src="./js/jquery-3.6.0.js"></script> -->
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.4/dist/jquery.fullpage.min.js"></script>
+    <script src="./js/fullpage.js"></script>
     <script src="./js/script.js"></script>
 
-    <title>Haagen-dazs</title>
+    <title>ChoiInHee_portfolio</title>
 </head>
 <body>
     <div id="wrap">
-        <section class="banner">
-            <header class="header">
-                <div class="menu-box">
-                    <ul class="menu menu-l"  data-aos="fade-zoom-in"
-                    data-aos-delay="2000">
-                        <li>
-                            <a href="#none">product
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">membership
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">brand
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                                
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="header-logo"></div>
-                    <ul class="menu menu-r"  data-aos="fade-zoom-in"
-                    data-aos-delay="2000">
-                        <li>
-                            <a href="#none">customer
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">log in
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">cart(0)
-                                <svg class="menu-line">
-                                    <rect class="line"/>
-                                </svg>        
-                                
-                            </a>
-                        </li>
-                    </ul>
+        <section class="section">
+            <div id="intro" class="full">
+                <div class="title">
+                    <img src="./img/title_name.svg" alt="">
                 </div>
-                <div class="menu-box-m">
-                    <div class="menu-btn" data-aos="fade-zoom-in"
-                    data-aos-delay="2000">
+                <header class="header">
+                    <div class="header-btn">
+                        <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    <ul class="menu-m">
-                        <li>
-                            <a href="#none">product</a>
-                        </li>
-                        <li>
-                            <a href="#none">recipes</a>
-                        </li>
-                        <li>
-                            <a href="#none">membership</a>
-                        </li>
-                        <li>
-                            <a href="#none">brand</a>
-                        </li>
-                        <li>
-                            <a href="#none">thatsdazs</a>
-                        </li>
-                        <li>
-                            <a href="#none">customer</a>
-                        </li>
-                    </ul>
-                    <div class="logo-m"></div>
-                    <div class="icon bag" data-aos="fade-zoom-in"
-                    data-aos-delay="2000">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M112 112C112 50.14 162.1 0 224 0C285.9 0 336 50.14 336 112V160H400C426.5 160 448 181.5 448 208V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V208C0 181.5 21.49 160 48 160H112V112zM160 160H288V112C288 76.65 259.3 48 224 48C188.7 48 160 76.65 160 112V160zM136 256C149.3 256 160 245.3 160 232C160 218.7 149.3 208 136 208C122.7 208 112 218.7 112 232C112 245.3 122.7 256 136 256zM312 208C298.7 208 288 218.7 288 232C288 245.3 298.7 256 312 256C325.3 256 336 245.3 336 232C336 218.7 325.3 208 312 208z"/>
-                        </svg>
-                    </div>
-                </div>
-
-            </header>
-
-            <div class="banner-txt" >
-                <div class="title font" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-easing="ease-in">
-                    <p>Find</p>
-                    <p>Your</p>
-                    <p>Luxury</p>
-                </div>
-                <div class="roll-btn" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-easing="ease-in">
-                    <div class="roll-box">
-                        <h2 class="btn1">our product!</h2>
-                        <h2 class="btn2">our product!</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-1">
-            <div class="container">
-                <div class="sec-1-head">
-                    <div class="badge">
-                        <div class="badge-inner back">
-                            <img src="./img/sec-1_badge.svg" alt="">
-                        </div>
-                        <div class="badge-inner icon">
-                            <img src="./img/icon_sec-1_ice-cream.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="head-inner">
-                        <div class="head-title font">Dazs Product</div>
-                        <div class="head-sub">
-                            세계 각국에서 찾아낸 엄선된 좋은 원재료만을 사용하여<br>
-                            60년 이상 이어져 온 타협하지 않는 장인정신의 레시피를 즐겨보세요
-                        </div>
-                    </div>
-                </div>
-                <div class="animate-wrap swiper customSwiper">
-                    <div class="animate-slider-box box1 swiper-wrapper">
-                        <div class="slide box1 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_1.png" alt="">
+                </header>
+                <ul class="menu-box">
+                    <li class="menu">
+                        <a href="#intro" class="font">intro</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#about" class="font">about me</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#skill" class="font">skill</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#portfolio" class="font">portfolio</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#contact" class="font">contact</a>
+                    </li>
+                </ul>
+    
+                <div class="container">
+                    <div class="intro-txt">
+                        <div class="head">
+                            <div class="box1 hidden">
+                                <div class="show img-box">
+                                    <img src="./img/head_web.svg" alt="">
                                 </div>
                             </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">quart</h6>
-                                    <h1 class="title font">vanilla</h1>
-                                    <h3 class="price">￦ 23,200</h3>
+                            <div class="box2 hidden">
+                                <div class="show img-box">
+                                    <img src="./img/head_publisher.svg" alt="">
                                 </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box2 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">bars</h6>
-                                    <h1 class="title font">choco almond</h1>
-                                    <h3 class="price">￦ 5,200</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box3 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">pint</h6>
-                                    <h1 class="title font">irish cream<br>brownie</h1>
-                                    <h3 class="price">￦ 13,900</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box4 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_4.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">cake&desort</h6>
-                                    <h1 class="title font">mini blanc cake</h1>
-                                    <h3 class="price">￦ 19,900</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box5 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_5.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">minicup</h6>
-                                    <h1 class="title font">mango</h1>
-                                    <h3 class="price">￦ 5,200</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box6 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_6.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">pint</h6>
-                                    <h1 class="title font">rum tres<br>leches</h1>
-                                    <h3 class="price">￦ 13,900</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box7 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_7.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">bars</h6>
-                                    <h1 class="title font">cookies cream</h1>
-                                    <h3 class="price">￦ 5,200</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box8 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_8.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">cake&desort</h6>
-                                    <h1 class="title font">macaron</h1>
-                                    <h3 class="price">￦ 38,900</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box9 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_9.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">bars</h6>
-                                    <h1 class="title font">vanilla caramel<br>almond</h1>
-                                    <h3 class="price">￦ 5,200</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide box10 swiper-slide">
-                            <div class="background">
-                                <div class="img-box">
-                                    <img src="./img/sec-1_10.png" alt="">
-                                </div>
-                            </div>
-                            <div class="txt-box">
-                                <div class="txt-inner">
-                                    <h6 class="type">pint</h6>
-                                    <h1 class="title font">bourbon praline<br>pecan</h1>
-                                    <h3 class="price">￦ 13,900</h3>
-                                </div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">buy now!</h2>
-                                        <h2 class="btn2">buy now!</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-2">
-            <div class="container">
-                <div class="card-flex-box">
-                    <div class="txt-box" data-aos="fade-up"
-                    data-aos-duration="2000">
-                        <div class="head-title font">
-                            <span>#</span>ThatsDazs</div>
-                        <div class="head-sub">당신이 있는 곳에서 찾은 한입에 담긴 럭셔리를 #ThatsDazs로 공유해보세요</div>
-                        <div class="roll-btn">
-                            <div class="roll-box">
-                                <h2 class="btn1">thats more!</h2>
-                                <h2 class="btn2">thats more!</h2>
                             </div>    
                         </div>
+                        <h6 class="sub">
+                            Hello!<br>
+                            Welcome To My Portfolio :)
+                        </h6>
                     </div>
-                    <div class="card-wrap" data-aos="fade-left"
-                    data-aos-duration="2000">
-                        <div class="card box1"></div>
-                        <div class="card box2"></div>
-                        <div class="card box3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-3">
-            <div class="container">
-                <div class="sec-3-flex">
-                    <div class="box-l">
-                        <div class="left-inner">
-                            <div class="head">
-                                <div class="head-title font">More<br>Dazs Flavor</div>
-                                <div class="head-sub">다양한 제품을 확인하고 자신에게 맞는 맛을 찾아보세요</div>
-                                <div class="roll-btn">
-                                    <div class="roll-box">
-                                        <h2 class="btn1">find it!</h2>
-                                        <h2 class="btn2">find it!</h2>
-                                    </div>    
-                                </div>
+                    <div class="intro-circle">
+                        <div class="circle-txt">
+                            <div class="img-box num1">
+                                <img src="./img/icon_2.svg" alt="">
                             </div>
-                            <div class="icon-container">
-                                <div class="icon-box" data-aos="fade-up"
-                                data-aos-duration="500">
-                                    <img src="./img/icon_sec-3_1.svg" alt="">
-                                </div>
-                                <div class="icon-box" data-aos="fade-up"
-                                data-aos-duration="1000">
-                                    <img src="./img/icon_sec-3_2.svg" alt="">
-                                </div>
-                                <div class="icon-box"data-aos="fade-up"
-                                data-aos-duration="1500">
-                                    <img src="./img/icon_sec-3_3.svg" alt="">
-                                </div>
-                                <div class="icon-box" data-aos="fade-up"
-                                data-aos-duration="2000">
-                                    <img src="./img/icon_sec-3_1.svg" alt="">
-                                </div>
-                                <div class="icon-box" data-aos="fade-up"
-                                data-aos-duration="2500">
-                                    <img src="./img/icon_sec-3_2.svg" alt="">
-                                </div>
+                            <div class="img-box num2">
+                                <img src="./img/icon_0.svg" alt="">
+                            </div>
+                            <div class="img-box num3">
+                                <img src="./img/icon_2.svg" alt="">
+                            </div>
+                            <div class="img-box num4">
+                                <img src="./img/icon_2.svg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="box-r">
-                        <ul class="flavor">
-                            <li>
-                                <svg veiwBow="0 0 262 67">
-                                    <text x="0" y="50">
-                                        City Sweet
-                                        <tspan dx="-7" dy="-30">8</tspan>
-                                    </text>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg veiwBow="0 0 262 67">
-                                    <text x="0" y="50">
-                                        Sorbet
-                                        <tspan dx="-9" dy="-30">3</tspan>
-                                    </text>
-                                </svg>
-
-                            </li>
-                            <li>
-                                <svg veiwBow="0 0 262 67">
-                                    <text x="0" y="50">
-                                        Non-Dairy
-                                        <tspan dx="-7" dy="-30">6</tspan>
-                                    </text>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg veiwBow="0 0 300 67">
-                                    <text x="0" y="50">
-                                        Gluten-Free
-                                        <tspan dx="-10" dy="-30">34</tspan>
-                                    </text>
-                                </svg>
-                            </li>
-                            <li>
-                                <svg veiwBow="0 0 262 67">
-                                    <text x="0" y="50">
-                                        Vegan
-                                        <tspan dx="-13" dy="-30">5</tspan>
-                                    </text>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-4">
-            <div class="container">
-                <div class="animation-txt box1">
-                    <img src="./img/membership_l.png" alt="">
-                </div>
-                <div class="head">
-                    <div class="head-title font">Membership</div>
-                </div>
-                <div class="sec-4-swiper swiper mySwiper">
-                    <div class="sec-4-wrapper swiper-wrapper">
-                        <div class="sec-4-slide swiper-slide">
-                            <div class="inner">
-                                <div class="title">welcome</div>
-                                <div class="icon-box">
-                                    <img src="./img/icon_sec-4_welcome.svg" alt="">
-                                </div>
-                                <div class="sub">신규 가입시 15% 할인<br>(3만원 이상 구매시)</div>
-                            </div>    
+                    <div class="intro-scroll">
+                        <div class="roll">
+                            <img src="./img/icon_scroll-down.svg" alt="">
                         </div>
-                        <div class="sec-4-slide swiper-slide">
-                            <div class="inner">
-                                <div class="title">birthday</div>
-                                <div class="icon-box">
-                                    <img src="./img/icon_sec-4_birthday.svg" alt="">
-                                </div>
-                                <div class="sub">하겐다즈 케이크<br>4,000원 할인</div>
-                            </div>    
-                        </div>
-                        <div class="sec-4-slide swiper-slide">
-                            <div class="inner">
-                                <div class="title">reveiw</div>
-                                <div class="icon-box">
-                                    <img src="./img/icon_sec-4_reveiw.svg" alt="">
-                                </div>
-                                <div class="sub">리뷰 작성시<br>500원 할인 쿠폰</div>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="sec-4-btn swiper-pagination"></div>
-                </div>
-                <div class="animation-txt box2">
-                    <img src="./img/membership_r.png" alt="">
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-5">
-            <div class="container">
-                <div class="badge">
-                    <div class="badge-inner back">
-                        <img src="./img/sec-5_badge.svg" alt="">
-                    </div>
-                    <div class="badge-inner icon">
-                        <img src="./img/icon_sec-5_co.svg" alt="">
-                    </div>
-                </div>
-                <div class="card-flex-box">
-                    <div class="txt-box" data-aos="fade-up"
-                    data-aos-duration="2000">
-                        <div class="head-title font">Collaboration</div>
-                        <div class="head-sub">새롭게 떠오르는 아티스트와의 협업을 통한 작품을 만나보세요</div>
-                        <div class="roll-btn">
-                            <div class="roll-box">
-                                <h2 class="btn1">veiw more !</h2>
-                                <h2 class="btn2">veiw more !</h2>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="card-wrap" data-aos="fade-left"
-                    data-aos-duration="2000">
-                        <div class="card box1"></div>
-                        <div class="card box2"></div>
-                        <div class="card box3"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-6">
-            <div class="container">
-                <div class="head">
-                    <div class="head-title font">Dazs Recipes</div>
-                    <div class="head-sub">
-                        하겐다즈 아이스크림의 다양한 플레이버를 통해<br>
-                        차별화된 맛과 비주얼의 크리에이션 레시피를 만들어보세요
-                    </div>
-                </div>
-                <div class="animate-wrap swiper customSwiper">
-                    <div class="animate-slider-box box1 swiper-wrapper">
-                        <div class="slide box1 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_1.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                butter pecan pancake ice cream sundae
-                            </div>
-                        </div>
-                        <div class="slide box2 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_2.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                chocolate ice crean cupcakes
-                            </div>
-                        </div>
-                        <div class="slide box3 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_3.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                peppermint bark ice cream float
-                            </div>
-                        </div>
-                        <div class="slide box4 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_4.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                ice cream Meringue sandwiches
-                            </div>
-                        </div>
-                        <div class="slide box5 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_5.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                banana split rum salted caramel
-                            </div>
-                        </div>
-                        <div class="slide box6 swiper-slide">
-                            <div class="img-box">
-                                <img src="./img/sec-6_6.jpg" alt="">
-                            </div>
-                            <div class="title font">
-                                vanilla ice cream brownie
-                            </div>
+                        <div class="arrow">
+                            <img src="./img/icon_arrow.svg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="head">
-                    <div class="logo-box">
-                        <img src="./img/logo-white.svg" alt="">
-                    </div>
+        <section class="section">
+            <div id="about" class="full">
+                <div class="title">
+                    <img src="./img/title_aboutme.svg" alt="">
                 </div>
-                <div class="content">
-                    <div class="txt-box">
-                        <div class="title">한국하겐-다즈(주)</div>
-                        <div class="sub">
-                            <div class="in-box">
-                                <p>대표 김미조</p>
-                                <p>주소 서울특별시 강남구 테헤란로 311 (역삼동, 아남타워 6층)</p>
-                            </div>
-                            <div class="in-box">
-                                <p>사업자등록번호 106-81-28964</p>
-                                <p>통신판매신고 강남-8186</p>
-                            </div>
-                            <div class="in-box">
-                                <p>대표전화 02-508-8500</p>
-                                <p>개인정보관리책임자 김미조 대표</p>
-                            </div>
+                <div class="container">
+                    <div class="flex-box">
+                        <div class="flex-inner">
+                            <div class="photo">
+                                <img src="./img/photo.jpg" alt="">
+                            </div>        
                         </div>
-                    </div>
-                    <ul class="notice">
-                        <li>공지사항</li>
-                        <li>이벤트</li>
-                        <li>매장안내</li>
-                        <li>고객센터</li>
-                    </ul>
-                    <div class="icon">
-                        <div class="in-box">
-                            <div class="img-box">
-                                <img src="./img/icon_f_facebook.svg" alt="">
-                            </div>
-                            <div class="img-box">
-                                <img src="./img/icon_f_instagram.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="in-box">
-                            <div class="img-box">
-                                <img src="./img/icon_f_youtube.svg" alt="">
-                            </div>
-                            <div class="img-box">
-                                <img src="./img/icon_f_cacaoch.svg" alt="">
-                            </div>
+                        <div class="flex-inner">
+                            <p class="about-txt">
+                                안녕하세요. 신입 웹퍼블리셔 최인희입니다.<br>
+                                ‘늦었다고 생각했을때가 가장 빠른 때다’ 라는 마음가짐으로<br>
+                                새롭게 웹퍼블리싱이라는 분야를 시작하게 되었습니다.<br>
+                                먼 길을 돌아온 만큼 정체되어 있지 않고 성장하는 퍼블리셔가 되겠습니다.<br>
+                                감사합니다 :)
+                            </p>
+                            <ul class="certificate-box">
+                                <li class="certificate-head">certificate</li>
+                                <li class="certificate-content">
+                                    <div class="certificate">
+                                        <div class="img-box">
+                                            <img src="./img/certificate_ps.svg" alt="">
+                                        </div>
+                                        <p>GTQ 1급</p>
+                                    </div>
+                                    <div class="certificate">
+                                        <div class="img-box">
+                                            <img src="./img/certificate_ai.svg" alt="">
+                                        </div>
+                                        <p>GTQi 1급</p>
+                                    </div>
+                                </li>
+                            </ul>        
                         </div>
                     </div>
                 </div>
-                <div class="bottom">Copyright © 2021 Haagen-Dazs Korea. All Rights Reserved.</div>
+                <div class="about-roll">
+                    <div class="img-box">
+                        <img src="./img/about_roll-txt.svg" alt="">
+                    </div>
+                    <div class="img-box">
+                        <img src="./img/about_roll-txt.svg" alt="">
+                    </div>
+                </div>   
             </div>
-        </footer>
+        </section>
+
+        <section class="section">
+            <div id="skill" class="full">
+                <div class="title">
+                    <img src="./img/title_skill.svg" alt="">
+                </div>
+                <div class="container">
+                    <div class="flex-box">
+                        <div class="tab-box">
+                            <div class="tab-out center"></div>
+                            <div class="tab-in center"></div>
+                            <ul class="tabs center">
+                                <li id="tab1" class="center tab-skill active">
+                                    <div class="img-box">
+                                        <img src="./img/skill_html.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        웹 표준과 웹 접근성을 준수하는<br>
+                                        HTML 구조설계로 시맨틱 태그를<br>
+                                        사용하여 마크업을 작성합니다.
+                                    </p>
+                                </li>
+                                <li id="tab2" class="center tab-skill">
+                                    <div class="img-box">
+                                        <img src="./img/skill_css.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        크로스브라우징에 대해 고려하며<br>
+                                        반응형 레이아웃 및 원하는 스타일로<br>
+                                        코드 구현이 가능합니다.
+                                    </p>
+                                </li>
+                                <li id="tab3" class="center tab-skill">
+                                    <div class="img-box">
+                                        <img src="./img/skill_js.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        필수적인 자바스크립트 활용이 가능하며<br>
+                                        주로 제이쿼리를 병행하여 사용합니다 .
+                                    </p>
+                                </li>
+                                <li id="tab4" class="center tab-skill">
+                                    <div class="img-box">
+                                        <img src="./img/skill_jquery.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        제이쿼리를 활용하여<br>
+                                        다앙한 애니메이션과 기능을<br>
+                                        구현할 수 있습니다.
+                                    </p>
+                                </li>
+                                <li id="tab5" class="center tab-skill">
+                                    <div class="img-box">
+                                        <img src="./img/skill_ps.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        사진 색감 및 사이즈 보정하는 등<br>
+                                        디자인 작업을 하여<br>
+                                        웹의 느낌을 살립니다.
+                                    </p>
+                                </li>
+                                <li id="tab6" class="center tab-skill">
+                                    <div class="img-box">
+                                        <img src="./img/skill_ai.svg" alt="">
+                                    </div>
+                                    <p class="txt">
+                                        svg,아이콘 등을 직접 작업하여<br>
+                                        웹 디자인에 다양성을 줍니다.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="skill-svg">
+                            <li data-alt="tab1" class="svg-box box1 active">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg> 
+                                    <span>95%</span>
+                                </div>
+                                <div class="svg-title">HTML</div>
+                            </li>
+                            <li data-alt="tab2" class="svg-box box2">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg>
+                                    <span>95%</span>
+                                </div>
+                                <div class="svg-title">CSS</div>
+                            </li>
+                            <li data-alt="tab3" class="svg-box box3">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg>
+                                    <span>80%</span>
+                                </div>
+                                <div class="svg-title">Javascript</div>
+                            </li>
+                            <li data-alt="tab4" class="svg-box box4">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg>
+                                    <span>85%</span>
+                                </div>
+                                <div class="svg-title">JQuery</div>
+                            </li>
+                            <li data-alt="tab5" class="svg-box box5">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg>
+                                    <span>95%</span>
+                                </div>
+                                <div class="svg-title">PHOTOSHOP</div>
+                            </li>
+                            <li data-alt="tab6" class="svg-box box6">
+                                <div class="svg-animation">
+                                    <svg class="chart" viewBox="0 0 33 33">
+                                        <circle class="circle" cx="16" cy="16" r="14.5"></circle>
+                                    </svg>
+                                    <span>95%</span>
+                                </div>
+                                <div class="svg-title">ILLUSTRATOR</div>
+                            </li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div id="portfolio" class="full">
+                <div class="title">
+                    <img src="./img/title_portfolio.svg" alt="">
+                </div>
+                <div class="swiper-wrap swiper mySwiper">
+                    <div class="swiper-slide-box swiper-wrapper">
+                        <div class="title-slide box1 swiper-slide">
+                            <div class="swiper-head">
+                                <div class="head k">
+                                    <img src="./img/portfolio_hanwharesort.svg" alt="">
+                                </div>
+                                <div class="head e font">hanwharesort</div>
+                            </div>
+                            <div class="portfolio-content hanwha">
+                                <div class="info-box">
+                                    <div class="info-inner">
+                                        <div class="info">
+                                            다양한 정보를 보기 편하도록 깔끔하게 디자인 하였으며,<br>
+                                            한화리조트 메인 컬러에 맞게 블루톤에 맞춰 통일감을 줬습니다.<br>
+                                            tab-menu, hover시 백그라운드이미지 변경 등의 기능 구현하였고<br>
+                                            반응형으로 제작하여 다양한 기기에서 사이트를 확인하실 수 있습니다.
+                                        </div>
+                                        <div class="info">
+                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
+                                            제작 기간 : 2주<br>
+                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
+                                        </div>
+                                        <div class="info bold">
+                                            #반응형 #tab-menu #hover #background-image
+                                        </div>
+                                        <a href="https://inhee115.github.io/hanwharesort/" class="portfolio-btn">
+                                            <p class="btn-txt">Go Site</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
+                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-slide box2 swiper-slide">
+                            <div class="swiper-head">
+                                <div class="head k">
+                                    <img src="./img/portfolio_haagen-dazs.svg" alt="">
+                                </div>
+                                <div class="head e font">haagen-dazs</div>
+                            </div>
+                            <div class="portfolio-content haagen">
+                                <div class="info-box">
+                                    <div class="info-inner">
+                                        <div class="info">
+                                            하겐다즈 이미지에 맞게 역동적이고 통통튀게 디자인 하였으며,<br>
+                                            'roll'을 컨셉으로 잡아 애니메이션을 구현하였습니다.<br>
+                                            swiper를 사용하여 동작에 다양성을 주었고<br>
+                                            hover, click시 모션이 작동되어 웹사이트에 쉬지않는 즐거움을 선사하였습니다.
+                                        </div>
+                                        <div class="info">
+                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
+                                            제작 기간 : 2주<br>
+                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
+                                        </div>
+                                        <div class="info bold">
+                                            #반응형 #swiper #animation #svg #click-photo #AOS
+                                        </div>
+                                        <a href="https://inhee115.github.io/Haagen-dazs/" class="portfolio-btn">
+                                            <p class="btn-txt">Go Site</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
+                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-slide box3 swiper-slide">
+                            <div class="swiper-head">
+                                <div class="head k">
+                                    <img src="./img/portfolio_choi.svg" alt="">
+                                </div>
+                                <div class="head e font">protfolio</div>
+                            </div>
+                            <div class="portfolio-content choi">
+                                <div class="info-box">
+                                    <div class="info-inner">
+                                        <div class="info">
+                                            제가 작업한 포트폴리오를 소개하는 페이지로,<br>
+                                            제가 가장 좋아하고 저를 표현할 수 있는 보라색을 메인 컬러로 디자인하였습니다.<br>
+                                            fullpage, swiper, animation을 적용하여 심플하지만 다양한 액션을 구현하였고<br>
+                                            글씨 사이즈를 크게 잡아 가시성과 집중력을 높혔습니다.
+                                        </div>
+                                        <div class="info">
+                                            기여도 : 디자인 100% + 퍼블리싱 100%<br>
+                                            제작 기간 : 2주<br>
+                                            사용프로그램 : Photoshop, Illustrator, VSCode, Figma
+                                        </div>
+                                        <div class="info bold">
+                                            #반응형 #fullpage #swiper #animation
+                                        </div>
+                                        <a href="#none" class="portfolio-btn">
+                                            <p class="btn-txt">Go Site</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 24 15" fill="none">
+                                                <path d="M-2.84124e-07 7.5L23 7.5M23 7.5L14.0244 14M23 7.5L14.0244 1" stroke="#D8CBFF"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div id="contact" class="full">
+                <div class="title">
+                    <img src="./img/title_contact.svg" alt="">
+                </div>
+                <div class="container">
+                    <div class="contact-txt">
+                        <div class="head">
+                            궁금한 점이 있으시다면 연락 주시기 바랍니다.<br>
+                            연락 주시면 3일 이내 회신드리겠습니다. 감사합니다 :)
+                        </div>
+                        <div class="email hidden">
+                            <div class="img-box show">
+                                <img src="./img/email.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="phone hidden">
+                            <div class="img-box show">
+                                <img src="./img/phone.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="animation-box">
+                            <div class="contact-circle">
+                                <div class="img-box">
+                                    <img src="./img/icon_circle.svg" alt="">
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <p>Copyright 2022. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
