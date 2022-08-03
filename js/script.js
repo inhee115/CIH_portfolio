@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-  //fullpage
-  new fullpage('#wrap', {
-    anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
-    scrollBar: true
-  });
-
   var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     slidesPerView: "auto",
@@ -96,9 +90,20 @@ $(document).ready(function(){
     $(`#${result}`).addClass('active');
   });
 
+
+  var ww = $(window).width();
+  media();
+
+  function media(){
+    if(ww > 500){
+      //fullpage
+      new fullpage('#wrap', {
+        anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
+        scrollBar: true
+      });
+    }else{}
+  }
+
   
   
-
-
-
 }); //end
