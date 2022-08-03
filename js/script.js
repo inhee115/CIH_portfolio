@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  //fullpage
+  new fullpage('#wrap', {
+    anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
+    scrollBar: true
+  });
+
+  // swiper
   var swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     slidesPerView: "auto",
@@ -91,18 +98,18 @@ $(document).ready(function(){
   });
 
 
-  var ww = $(window).width();
-  media();
+  // var ww = $(window).width();
+  // media();
 
-  function media(){
-    if(ww > 500){
-      //fullpage
-      new fullpage('#wrap', {
-        anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
-        scrollBar: true
-      });
-    }else{}
-  }
+  // function media(){
+  //   if(ww > 500){
+  //     //fullpage
+  //     new fullpage('#wrap', {
+  //       anchors: ['firstPage','secondPage','3rdPage','4rdPage','5rdPage','6rdPage'],
+  //       scrollBar: true
+  //     });
+  //   }else{}
+  // }
 
   
   
