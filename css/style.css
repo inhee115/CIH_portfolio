@@ -48,6 +48,10 @@
     height: 23px;
     width: auto;
 }
+#intro .title img,
+#portfolio .title img{
+    object-fit: contain;
+}
 .menu-box{
     width: 100%;
     height: 100vh;
@@ -532,6 +536,9 @@
     color: #EBD8F6;
     opacity: .5;
     z-index: -1;
+}
+.swiper-head .e img{
+    object-fit: contain;
 }
 .swiper-wrap .title-slide{
     width: 985px !important;
@@ -1346,9 +1353,6 @@
         font-size: 30px;
         letter-spacing: 1px;
         bottom: 10px;
-    }
-    .swiper-head .e img{
-        object-fit: contain;
     }
     .portfolio-content .info{
         font-size: 10px;
