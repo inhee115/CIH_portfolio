@@ -1110,9 +1110,9 @@
         width: 100%;
         padding: 0 16px;
     }
-    /* .title{
-        left: 16px;
-    } */
+    .full{
+        height: auto;
+    }
     .title{
         display: none;
     }
@@ -1121,6 +1121,9 @@
     }
 
     /* intro */
+    #intro.full, #about.full, #skill.full{
+        height: 100vh;
+    }
     .header{
         padding: 0 16px;
     }
@@ -1223,6 +1226,13 @@
     }
 
     /* portfolio */
+    #portfolio.full{
+        padding: 140px 0;
+    }
+    .swiper-wrap{
+        top: 0;
+        transform: inherit;
+    }
     .swiper-wrap .title-slide{
         width: 450px !important;
         margin: 30px 20% !important;
@@ -1251,27 +1261,45 @@
     }
 
     /* contact */
+    #contact.full{
+        padding: 20px 0;
+    }
     .contact-txt{
-        padding: 0 16px;
-        transform: translateY(-80%);
+        position: inherit;
+        transform: inherit;
+        padding: 50px 16px;
     }
     #contact .head {
         font-size: 14px;
     }
     #contact .animation-box{
-        right: 8%;
-        bottom: -200px;
+        position: inherit;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
     }
     #contact .animation-box .img-box {
         width: 170px;
     }
     #contact p {
         font-size: 12px;
+        position: inherit;
+        text-align: center;
+        transform: inherit;
+        left: 0;
+        bottom: 0;
+        padding-top: 20px;
     }
 
 }
 
 @media (max-width:500px){
+    /* 공통 */
+    #about.full, #skill.full{
+        height: auto;
+    }
+
     /* intro */
     .menu-box .menu a {
         font-size: 35px;
@@ -1297,7 +1325,7 @@
 
     /* about */
     #about .flex-box{
-        padding: 0;
+        padding: 100px 0 0;
         justify-content: center;
     }
     #about .photo {
@@ -1326,7 +1354,7 @@
     /* skill */
     #skill .flex-box{
         justify-content: center;
-        padding: 0;
+        padding: 120px 0 60px;
     }
     #skill .tab-box{
         display: none;
@@ -1385,9 +1413,6 @@
     }
     #contact .phone {
         margin-top: 15px;
-    }
-    #contact .animation-box{
-        bottom: -170px;
     }
     #contact .animation-box .img-box {
         width: 140px;
