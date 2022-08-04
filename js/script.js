@@ -109,9 +109,11 @@ $(document).ready(function(){
 
         //skill animation
         var skillT = $('#skill').offset().top;
-        if(sct >= skillT ){
+        var portfolioT = $('#portfolio').offset().top;
+        if(skillT <= sct && sct <  portfolioT){
           $('.skill-svg .circle').addClass('active');
-        }else{
+        }
+        else{
           $('.skill-svg .circle').removeClass('active');
         }
 
