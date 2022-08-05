@@ -18,6 +18,7 @@
     left: 45px;
     width: 23px;
     height: auto;
+    z-index: 9;
 }
 /* 공통 애니메이션 */
 .hidden{
